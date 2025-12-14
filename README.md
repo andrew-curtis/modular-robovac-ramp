@@ -1,6 +1,7 @@
 # Robo-Vac Rug Ramp - Modular Design
 
 A parametric OpenSCAD design for creating modular ramps to help robot vacuums climb over rugs and floor transitions. Features interlocking dovetail joints for connecting multiple sections to cover wider areas.
+<img width="907" height="558" alt="image" src="https://github.com/user-attachments/assets/acaeb193-e8c9-4002-957e-40b33047ce8b" />
 
 ## Features
 

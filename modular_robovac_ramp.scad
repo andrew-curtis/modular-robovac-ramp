@@ -2,14 +2,14 @@
 
 ramp_height = 18;                 // Height of the ramp surface (mm) - grip texture adds ~1mm
 ramp_length = 100;                // Length of the ramp (mm)
-ramp_width = 200;                 // Width of each modular section (mm)
+ramp_width = 100;                 // Width of each modular section (mm)
 ramp_thickness = 1;               // Thickness at the base of the ramp (mm)
 texture_protrusion = -0.5;        // Offset perpendicular to ramp surface (mm)
 top_fillet_radius = 8;            // Radius for rounded top edge (mm)
 
 // Dovetail rendering options
-// Set this to false when you want to print an edge piece with
-render_both_sides = false;         // true = both male and female, false = use dovetail_side
+enable_dovetails = true;           // Set to false to print a plain ramp with no dovetails
+render_both_sides = true;         // true = both male and female, false = use dovetail_side
 dovetail_side = "male";           // "male" or "female" - only used if render_both_sides = false
 
 // Dovetail parameters (oriented along vertical edges running parallel to X-axis)
@@ -222,5 +222,5 @@ if (test_mode) {
   // Set side to "both" to see male and female dovetails together
   // Set to "male" or "female" to render individual pieces for printing
   side_to_render = render_both_sides ? "both" : dovetail_side;
-  ramp_section(ramp_width, true, side_to_render);
+  ramp_section(ramp_width, enable_dovetails, side_to_render);
 }

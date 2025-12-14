@@ -41,6 +41,7 @@ The dovetails use a trapezoidal profile for a self-tightening fit. The center of
 
 | Parameter | Default | Description |
 |-----------|---------|-------------|
+| `enable_dovetails` | true | Set to false to print a plain ramp with no dovetails |
 | `render_both_sides` | false | true = render both male and female dovetails, false = use dovetail_side |
 | `dovetail_side` | "male" | "male" or "female" - only used if render_both_sides = false |
 | `test_mode` | false | true = render quick test piece, false = render full ramp |
@@ -49,14 +50,16 @@ The dovetails use a trapezoidal profile for a self-tightening fit. The center of
 
 ### Basic Printing
 
-1. Open `roborock_ramp.scad` in OpenSCAD
+1. Open `modular_robovac_ramp.scad` in OpenSCAD
 2. Adjust `ramp_height` to match your rug height
 3. Adjust `ramp_width` based on your printer bed size and desired coverage
-4. For a single standalone ramp, set `render_both_sides = true`
-5. For modular sections, print separate male and female pieces:
-   - Set `render_both_sides = false` and `dovetail_side = "male"` for first piece
-   - Set `dovetail_side = "female"` for second piece
-   - Continue alternating for additional sections
+4. Choose your printing approach:
+   - **Plain ramp (no dovetails)**: Set `enable_dovetails = false`
+   - **Single standalone ramp with dovetails**: Set `enable_dovetails = true` and `render_both_sides = true`
+   - **Modular sections**: Set `enable_dovetails = true`, print separate male and female pieces:
+     - Set `render_both_sides = false` and `dovetail_side = "male"` for first piece
+     - Set `dovetail_side = "female"` for second piece
+     - Continue alternating for additional sections
 
 ### Testing Dovetail Fit
 
